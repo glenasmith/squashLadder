@@ -23,13 +23,13 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="name" title="Name" />
+                        
                    	        <g:sortableColumn property="email" title="Email" />
                         
                    	        <g:sortableColumn property="gamesPlayed" title="Games Played" />
                         
                    	        <g:sortableColumn property="gamesWon" title="Games Won" />
-                        
-                   	        <g:sortableColumn property="name" title="Name" />
                         
                         </tr>
                     </thead>
@@ -39,13 +39,13 @@
                         
                             <td><g:link action="show" id="${playerInstance.id}">${fieldValue(bean:playerInstance, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:playerInstance, field:'name')}</td>
+                        
                             <td>${fieldValue(bean:playerInstance, field:'email')}</td>
                         
                             <td>${fieldValue(bean:playerInstance, field:'gamesPlayed')}</td>
                         
                             <td>${fieldValue(bean:playerInstance, field:'gamesWon')}</td>
-                        
-                            <td>${fieldValue(bean:playerInstance, field:'name')}</td>
                         
                         </tr>
                     </g:each>

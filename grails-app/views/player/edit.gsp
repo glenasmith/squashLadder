@@ -31,6 +31,15 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
+                                    <label for="name">Name:</label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:playerInstance,field:'name','errors')}">
+                                    <input type="text" id="name" name="name" value="${fieldValue(bean:playerInstance,field:'name')}"/>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name">
                                     <label for="email">Email:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:playerInstance,field:'email','errors')}">
@@ -53,15 +62,6 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:playerInstance,field:'gamesWon','errors')}">
                                     <input type="text" id="gamesWon" name="gamesWon" value="${fieldValue(bean:playerInstance,field:'gamesWon')}" />
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="name">Name:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:playerInstance,field:'name','errors')}">
-                                    <input type="text" id="name" name="name" value="${fieldValue(bean:playerInstance,field:'name')}"/>
                                 </td>
                             </tr> 
                         

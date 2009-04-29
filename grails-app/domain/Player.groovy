@@ -6,5 +6,8 @@ class Player {
 	int gamesWon
 
     static constraints = {
+		name(blank:false)
+		email(email:true)
+		
     }
 }
