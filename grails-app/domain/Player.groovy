@@ -6,8 +6,12 @@ class Player {
 	int gamesWon
 
     static constraints = {
-		name(blank:false)
+		name(blank:false, unique: true)
 		email(email:true)
 		
     }
+
+	String toString() {
+		return name
+	}
 }

@@ -40,7 +40,7 @@
                                     <label for="winner">Winner:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:gameInstance,field:'winner','errors')}">
-                                    <g:select optionKey="id" from="${Player.list()}" name="winner.id" value="${gameInstance?.winner?.id}" ></g:select>
+                                    <g:select optionKey="id" from="${Player.list()}" name="winner.id" value="${gameInstance?.winner?.name}" ></g:select>
                                 </td>
                             </tr> 
                         
@@ -49,7 +49,7 @@
                                     <label for="loser">Loser:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:gameInstance,field:'loser','errors')}">
-                                    <g:select optionKey="id" from="${Player.list()}" name="loser.id" value="${gameInstance?.loser?.id}" ></g:select>
+                                    <g:select optionKey="id" from="${Player.list()}" name="loser.id" value="${gameInstance?.loser?.name}" ></g:select>
                                 </td>
                             </tr> 
                         
