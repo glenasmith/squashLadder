@@ -88,11 +88,17 @@ class GameController {
 
     def save = {
         def gameInstance = new Game(params)
+		def winner = Player.findById(params.winner.id)
+		def loser = Player.findById(params.loser.id)
+			winner.gamesPlayed++
+			winner.gamesWon++
+			loser.gamesPlayed++
         if(!gameInstance.hasErrors() && gameInstance.save()) {
             flash.message = "Game ${gameInstance.id} created"
-            redirect(action:show,id:gameInstance.id)
+			redirect(action:show,id:gameInstance.id)
         }
         else {
+			
             render(view:'create',model:[gameInstance:gameInstance])
         }
     }
