@@ -11,11 +11,7 @@ class Game {
 		               return winner != game.loser
 		   			}
 				)
-		loser(blank:false, 
-		   validator: { loser, game ->  
-		               return loser != game.winner
-		   			}
-			  )
+		loser(blank:false)
 		
     }
 }
