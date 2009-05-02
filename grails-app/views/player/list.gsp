@@ -49,7 +49,7 @@
                         
                             <td>${fieldValue(bean:playerInstance, field:'gamesWon')}</td>
 
-							<td>${fieldValue(bean:playerInstance.getPercentage())}</td>
+							<td>${fieldValue(bean:playerInstance, field:'percentage')}</td>
                         
                         </tr>
                     </g:each>
