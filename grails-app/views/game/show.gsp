@@ -32,7 +32,7 @@
                         <tr class="prop">
                             <td valign="top" class="name">Date Played:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:gameInstance, field:'datePlayed')}</td>
+                            <td valign="top" class="value"><g:formatDate format="dd-MMM-yyyy"> ${fieldValue(bean:gameInstance, field:'datePlayed')}</g:formatDate></td>
                             
                         </tr>
                     

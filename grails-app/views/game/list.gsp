@@ -37,7 +37,7 @@
                         
                             <td><g:link action="show" id="${gameInstance.id}">${fieldValue(bean:gameInstance, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:gameInstance, field:'datePlayed')}</td>
+                            <td><g:formatDate format="dd-MMM-yyyy">${fieldValue(bean:gameInstance, field:'datePlayed')}</g:formatDate></td>
                         
                             <td>${fieldValue(bean:gameInstance, field:'winner')}</td>
                         

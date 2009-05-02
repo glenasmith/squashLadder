@@ -31,7 +31,8 @@
                                     <label for="datePlayed">Date Played:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:gameInstance,field:'datePlayed','errors')}">
-                                    <g:datePicker name="datePlayed" value="${gameInstance?.datePlayed}" ></g:datePicker>
+	
+                                    <g:datePicker name="datePlayed" precision="day" value="${gameInstance?.datePlayed}" ></g:datePicker>
                                 </td>
                             </tr> 
                         
