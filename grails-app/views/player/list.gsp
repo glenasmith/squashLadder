@@ -12,7 +12,7 @@
             <span class="menuButton"><g:link class="create" action="create">New Player</g:link></span>
         </div>
         <div class="body">
-            <h1>Player List</h1>
+            <h1>Ladder</h1>
             <g:if test="${flash.message}">
             <div class="message">${flash.message}</div>
             </g:if>
@@ -21,15 +21,17 @@
                     <thead>
                         <tr>
                         
-                   	        <g:sortableColumn property="id" title="Id" />
+                   	        <g:sortableColumn property="ranking" title="Ranking" />
                         
                    	        <g:sortableColumn property="name" title="Name" />
                         
-                   	        <g:sortableColumn property="email" title="Email" />
+                   	        
                         
                    	        <g:sortableColumn property="gamesPlayed" title="Games Played" />
                         
                    	        <g:sortableColumn property="gamesWon" title="Games Won" />
+
+							<g:sortableColumn property="percentage" title="Winning Percentage" />
                         
                         </tr>
                     </thead>
@@ -37,15 +39,17 @@
                     <g:each in="${playerInstanceList}" status="i" var="playerInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
-                            <td><g:link action="show" id="${playerInstance.id}">${fieldValue(bean:playerInstance, field:'id')}</g:link></td>
+                            <td>${i+1}</td>
                         
-                            <td>${fieldValue(bean:playerInstance, field:'name')}</td>
+                            <td><g:link action="show" id="${playerInstance.id}">${fieldValue(bean:playerInstance, field:'name')}</g:link></td>
                         
-                            <td>${fieldValue(bean:playerInstance, field:'email')}</td>
+                          
                         
                             <td>${fieldValue(bean:playerInstance, field:'gamesPlayed')}</td>
                         
                             <td>${fieldValue(bean:playerInstance, field:'gamesWon')}</td>
+
+							<td>${fieldValue(bean:playerInstance.getPercentage())}</td>
                         
                         </tr>
                     </g:each>
