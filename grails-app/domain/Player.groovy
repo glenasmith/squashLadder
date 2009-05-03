@@ -21,7 +21,7 @@ class Player {
 	int getPercentage() {
 		if (gamesWon == 0) {return 0}
 		else{
-			return (gamesPlayed/gamesWon) *100
+			return (gamesWon/gamesPlayed) *100
 		}
 	}
 	
