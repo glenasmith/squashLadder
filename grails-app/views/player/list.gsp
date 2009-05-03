@@ -21,7 +21,6 @@
                     <thead>
                         <tr>
                         
-                   	        <g:sortableColumn property="ranking" title="Ranking" />
                         
                    	        <g:sortableColumn property="name" title="Name" />
                         
@@ -38,8 +37,6 @@
                     <tbody>
                     <g:each in="${playerInstanceList}" status="i" var="playerInstance">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td>${i+1}</td>
                         
                             <td><g:link action="show" id="${playerInstance.id}">${fieldValue(bean:playerInstance, field:'name')}</g:link></td>
                         

@@ -9,10 +9,9 @@ class Player {
     static constraints = {
 		name(blank:false, unique: true)
 		email(email:true)
-		
-    }
+   }
 
-	static transients = ['percentage']
+	//static transients = ['percentage']
 		
 	String toString() {
 		return name
