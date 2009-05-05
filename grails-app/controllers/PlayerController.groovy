@@ -7,10 +7,21 @@ class PlayerController {
     // the delete, save and update actions only accept POST requests
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
-    def list = {
-        params.max = Math.min( params.max ? params.max.toInteger() : 10,  100)
-        [ playerInstanceList: Player.list( params ), playerInstanceTotal: Player.count() ]
-    }
+    def list = { params.max = Math.min( params.max ? params.max.toInteger() : 10, 100)
+	def players
+ 	if(params.sort=="percentage"){
+		println "****************************************"
+		params.sort="gamesWon"
+   		players = Player.list().sort{
+			it.getPercentage()
+			}
+     		print players
+  		}
+		else{
+			players = Player.list().sort(params)
+		}
+	
+   [playerInstanceList: players , playerInstanceTotal:Player.count() ] }
 
     def show = {
         def playerInstance = Player.get( params.id )
