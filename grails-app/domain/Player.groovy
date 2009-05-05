@@ -4,7 +4,7 @@ class Player {
 	String email
 	int gamesPlayed
 	int gamesWon
-	//int percentage = 0
+	int percentage = 0
 
     static constraints = {
 		name(blank:false, unique: true)
