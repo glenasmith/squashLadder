@@ -14,7 +14,6 @@ class PlayerController {
 	  		player.getPercentage()
 	  	}
 	  	if(params.order=="desc"){
-	  		println params.order
 	  		players = players.reverse()
 	  	}
 	  	return [ playerInstanceList: players, playerInstanceTotal: Player.count() ]

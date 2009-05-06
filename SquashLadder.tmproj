@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>grails-app/views/player/list.gsp</string>
+	<string>grails-app/controllers/PlayerController.groovy</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -88,9 +88,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>42</integer>
+				<integer>5</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>16</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -116,9 +116,9 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>3</integer>
+				<integer>1</integer>
 				<key>line</key>
-				<integer>13</integer>
+				<integer>6</integer>
 			</dict>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
@@ -149,8 +149,8 @@
 		<string>grails-app/conf/DataSource.groovy</string>
 	</array>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{610, 0}, {628, 778}}</string>
+	<string>{{481, 0}, {799, 778}}</string>
 </dict>
 </plist>
