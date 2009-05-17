@@ -96,7 +96,7 @@ class GameController {
 				winner.gamesWon++
 				loser.gamesPlayed++
             flash.message = "Game ${gameInstance.id} created"
-			redirect(action:show,id:gameInstance.id)
+			redirect(controller: 'player', action:list)
         }
         else {
 			
