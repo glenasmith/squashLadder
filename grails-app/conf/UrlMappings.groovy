@@ -5,6 +5,11 @@ class UrlMappings {
 			 // apply constraints here
 		  }
 	  }
+	"/player/$id/stats" {
+		controller = "player"
+		action = "stats"
+	}
+
       "/"(view:"/index")
 	  "500"(view:'/error')
 	}

@@ -60,6 +60,8 @@
                     </tbody>
                 </table>
             </div>
+ 
+	
             <div class="buttons">
                 <g:form>
                     <input type="hidden" name="id" value="${playerInstance?.id}" />

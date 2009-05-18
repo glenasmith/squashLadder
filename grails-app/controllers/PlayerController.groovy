@@ -8,8 +8,13 @@ class PlayerController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = { params.max = Math.min( params.max ? params.max.toInteger() : 10, 100)
+		
+	  if(params.sort==null){
+		params.sort = 'percentage'
+		params.order = 'desc'
+	}
 	
-	  if(params.sort=="percentage"){
+		if(params.sort=="percentage"){
 	  	def players = Player.list().sort {player ->
 	  		player.getPercentage()
 	  	}
@@ -23,6 +28,7 @@ class PlayerController {
 	  }
 	}
 
+	
     def show = {
         def playerInstance = Player.get( params.id )
 
@@ -107,4 +113,21 @@ class PlayerController {
             render(view:'create',model:[playerInstance:playerInstance])
         }
     }
+
+	def stats = {
+		Player player = Player.findById('1')
+		if (player) {
+	//		if(gamesPlayed > 0){
+				def allGames = [dean:1, emily:2, kate:4]
+		//		def listOfGames = Games.findAll('where winner = $player')
+				return [allGames:allGames]
+	  // 	}else{
+	  // 		flash.message = "No games played by this player"
+	  // 		redirect(uri: "/")
+	  // 		}
+		}
+	}
+	
+
 }
+
