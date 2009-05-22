@@ -47,7 +47,8 @@
                     </g:each>
                     </tbody>
                 </table>
-            </div>
+           
+			 </div>			
             <div class="paginateButtons">
                 <g:paginate total="${gameInstanceTotal}" />
             </div>

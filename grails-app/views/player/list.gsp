@@ -52,9 +52,17 @@
                     </g:each>
                     </tbody>
                 </table>
-            </div>
+</div>
+				<g:pieChart type="2d"  
+				            title='Games Won'  
+				            size="${[600,200]}" 
+							labels="${winnersTotals.keySet()}"
+							dataType='text'  
+				            data='${winnersTotals.values().asList()}' />
+			
             <div class="paginateButtons">
                 <g:paginate total="${playerInstanceTotal}" />
+
             </div>
         </div>
     </body>

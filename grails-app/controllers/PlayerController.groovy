@@ -21,7 +21,16 @@ class PlayerController {
 	  	if(params.order=="desc"){
 	  		players = players.reverse()
 	  	}
-	  	return [ playerInstanceList: players, playerInstanceTotal: Player.count() ]
+	
+		def winnersTotals = [:]
+		def gameTotals = [:]
+		players.each { player->
+			if(player.gamesWon>0){
+			winnersTotals[player.name] = player.gamesWon
+		}
+			gameTotals[player.name] = player.gamesPlayed
+		}
+		return [ playerInstanceList: players, playerInstanceTotal: Player.count(), winnersTotals: winnersTotals  ]
 		}
 	  else{
 	  		return [ playerInstanceList: Player.list(params), playerInstanceTotal: Player.count() ]
@@ -31,7 +40,7 @@ class PlayerController {
 	
     def show = {
         def playerInstance = Player.get( params.id )
-
+		def allGames = [dean:1, emily:2, kate:4]
         if(!playerInstance) {
             flash.message = "Player not found with id ${params.id}"
             redirect(action:list)
