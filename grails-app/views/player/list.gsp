@@ -7,10 +7,7 @@
         <title>Player List</title>
     </head>
     <body>
-        <div class="nav">
-            <span class="menuButton"><a class="home" href="${createLinkTo(dir:'')}">Home</a></span>
-            <span class="menuButton"><g:link class="create" action="create">New Player</g:link></span><span class="menuButton"><g:link class="create" controller="game" action="create">New Game</g:link></span>
-        </div>
+        
         <div class="body">
             <h1>Ladder</h1>
             <g:if test="${flash.message}">
@@ -30,7 +27,7 @@
                         
                    	        <g:sortableColumn property="gamesWon" title="Games Won" />
 
-							<g:sortableColumn property="percentage" title="Winning Percentage" />
+							<g:sortableColumn property="percentage" title="Percentage" />
                         
                         </tr>
                     </thead>
@@ -53,12 +50,7 @@
                     </tbody>
                 </table>
 </div>
-				<g:pieChart type="2d"  
-				            title='Games Won'  
-				            size="${[600,200]}" 
-							labels="${winnersTotals.keySet()}"
-							dataType='text'  
-				            data='${winnersTotals.values().asList()}' />
+			
 			
             <div class="paginateButtons">
                 <g:paginate total="${playerInstanceTotal}" />

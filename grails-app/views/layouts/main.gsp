@@ -13,13 +13,14 @@ class="logo"><img src="${createLinkTo(dir:'images',file:'logo.jpg')}" alt="Squas
 <div id="bd" role="main"> 
 	<div id="yui-main"> 
 		<div class="yui-b">
-			<div class="yui-g"> Inside body
+			<div class="yui-g"> 
  				<g:layoutBody />
 			</div> 
 		</div>
 	</div>
-	<div class="yui-b">Graphs to go here
+	<div class="yui-b">
+		<g:render template="/player/playerGraph" />
 	</div>
 
  </div>
- <div id="ft" role="contentinfo"><p>Footer</p></div> </div> </body> </html>
+ <div id="ft" role="contentinfo"><div class="footer"><p>This site will go live with results from games starting 26th May 2009. Currently only sample data only is shown.</p></div></div> </div> </body> </html>

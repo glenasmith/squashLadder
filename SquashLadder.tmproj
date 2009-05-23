@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>currentDocument</key>
-	<string>grails-app/controllers/PlayerController.groovy</string>
+	<string>grails-app/views/layouts/main.gsp</string>
 	<key>documents</key>
 	<array>
 		<dict>
@@ -57,6 +57,8 @@
 			<string>src</string>
 		</dict>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>web-app</string>
 			<key>regexFolderFilter</key>
@@ -88,30 +90,14 @@
 			<key>caret</key>
 			<dict>
 				<key>column</key>
-				<integer>2</integer>
+				<integer>23</integer>
 				<key>line</key>
-				<integer>37</integer>
+				<integer>13</integer>
 			</dict>
-			<key>columnSelection</key>
-			<false/>
 			<key>firstVisibleColumn</key>
 			<integer>0</integer>
 			<key>firstVisibleLine</key>
 			<integer>4</integer>
-			<key>selectFrom</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>11</integer>
-			</dict>
-			<key>selectTo</key>
-			<dict>
-				<key>column</key>
-				<integer>2</integer>
-				<key>line</key>
-				<integer>37</integer>
-			</dict>
 		</dict>
 		<key>grails-app/domain/Game.groovy</key>
 		<dict>
@@ -173,6 +159,20 @@
 				<integer>19</integer>
 			</dict>
 		</dict>
+		<key>grails-app/views/layouts/main.gsp</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>57</integer>
+				<key>line</key>
+				<integer>10</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>0</integer>
+		</dict>
 		<key>grails-app/views/player/list.gsp</key>
 		<dict>
 			<key>caret</key>
@@ -215,10 +215,26 @@
 			<key>firstVisibleLine</key>
 			<integer>0</integer>
 		</dict>
+		<key>web-app/css/main.css</key>
+		<dict>
+			<key>caret</key>
+			<dict>
+				<key>column</key>
+				<integer>1</integer>
+				<key>line</key>
+				<integer>11</integer>
+			</dict>
+			<key>firstVisibleColumn</key>
+			<integer>0</integer>
+			<key>firstVisibleLine</key>
+			<integer>13</integer>
+		</dict>
 	</dict>
 	<key>openDocuments</key>
 	<array>
 		<string>grails-app/controllers/PlayerController.groovy</string>
+		<string>grails-app/views/layouts/main.gsp</string>
+		<string>web-app/css/main.css</string>
 		<string>grails-app/views/player/list.gsp</string>
 		<string>grails-app/domain/Player.groovy</string>
 		<string>grails-app/domain/Game.groovy</string>
@@ -229,6 +245,6 @@
 	<key>showFileHierarchyDrawer</key>
 	<true/>
 	<key>windowFrame</key>
-	<string>{{49, 11}, {592, 767}}</string>
+	<string>{{209, 0}, {771, 778}}</string>
 </dict>
 </plist>

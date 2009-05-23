@@ -17,6 +17,12 @@ body {
     font: 11px verdana, arial, helvetica, sans-serif;
 }
 
+.footer {
+    background: #557316 ;
+    color: #fff;
+    font: 11px verdana, arial, helvetica, sans-serif;
+}
+
 a:link, a:visited, a:hover {
     color: #666;
     font-weight: bold;
@@ -24,7 +30,7 @@ a:link, a:visited, a:hover {
 } 
 
 h1 {
-    color: #006dba;
+    color: #7CA621;
     font-weight: normal;
     font-size: 16px;
     margin: .8em 0 .3em 0;
@@ -170,7 +176,7 @@ th.desc a {
 }
 
 .odd {
-    background: #f7f7f7;
+    background: #f2f2f2;
 }
 .even {
     background: #fff;
@@ -185,7 +191,7 @@ th.desc a {
     border-left: 1px solid #ddd;
 }
 .list th:hover, .list tr:hover {
-    background: #b2d1ff;
+    background: #E6F288;
 }
 
 /* PAGINATION */
