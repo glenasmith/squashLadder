@@ -9,14 +9,14 @@ class PlayerController {
 
     def list = { params.max = Math.min( params.max ? params.max.toInteger() : 10, 100)
 		
-	  if(params.sort==null){
-		params.sort = 'percentage'
-		params.order = 'desc'
-	}
+	  	if(params.sort==null){
+			params.sort = 'percentage'
+			params.order = 'desc'
+		}
 	
 		if(params.sort=="percentage"){
-	  	def players = Player.list().sort {player ->
-	  		player.getPercentage()
+	  		def players = Player.list().sort {player ->
+	  			player.getPercentage()
 	  	}
 	  	if(params.order=="desc"){
 	  		players = players.reverse()
@@ -33,7 +33,8 @@ class PlayerController {
 		return [ playerInstanceList: players, playerInstanceTotal: Player.count(), winnersTotals: winnersTotals  ]
 		}
 	  else{
-	  		return [ playerInstanceList: Player.list(params), playerInstanceTotal: Player.count() ]
+			
+	  		return [ playerInstanceList: Player.list(params), playerInstanceTotal: Player.count(), winnersTotals: gameTotals ]
 	  }
 	}
 

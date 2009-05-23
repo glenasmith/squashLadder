@@ -23,4 +23,4 @@ class="logo"><g:link class="list" action="list"><img src="${createLinkTo(dir:'im
 	</div>
 
  </div>
- <div id="ft" role="contentinfo"><div class="footer"><p>This site will go live with results from games starting 26th May 2009. Currently only sample data only is shown.</p></div></div> </div> </body> </html>
+ <div id="ft" role="contentinfo"><div class="footer"><p></p></div></div> </div> </body> </html>
