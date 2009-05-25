@@ -1,9 +1,11 @@
+	
 	<g:pieChart type="2d"  
-	            title='Games Won'  
+	            title="${title}" 
 	            size="${[300,230]}" 
-				labels="${winnersTotals.keySet()}"
+				labels="${totals.keySet()}"
 				dataType='text'  
-	            data='${winnersTotals.values().asList()}'
+	            data='${totals.values().asList()}'
 				colors="7CA621"
 				
 	 			/>
+	

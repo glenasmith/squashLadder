@@ -8,6 +8,9 @@ class PlayerController {
     static allowedMethods = [delete:'POST', save:'POST', update:'POST']
 
     def list = { params.max = Math.min( params.max ? params.max.toInteger() : 10, 100)
+		def totals = [:]
+		def title
+		def players = Player.list()
 		
 	  	if(params.sort==null){
 			params.sort = 'percentage'
@@ -15,27 +18,30 @@ class PlayerController {
 		}
 	
 		if(params.sort=="percentage"){
-	  		def players = Player.list().sort {player ->
-	  			player.getPercentage()
-	  	}
-	  	if(params.order=="desc"){
-	  		players = players.reverse()
-	  	}
+			title = "Games Won"
+	  		players.sort {player ->
+	  				player.getPercentage()
+	  			}
+	  			if(params.order=="desc"){
+	  				players = players.reverse()
+	  			}
 	
-		def winnersTotals = [:]
-		def gameTotals = [:]
-		players.each { player->
-			if(player.gamesWon>0){
-			winnersTotals[player.name] = player.gamesWon
-		}
-			gameTotals[player.name] = player.gamesPlayed
-		}
-		return [ playerInstanceList: players, playerInstanceTotal: Player.count(), winnersTotals: winnersTotals  ]
+				players.each { player->
+					if(player.gamesWon>0){
+						totals[player.name] = player.gamesWon
+					}
+					
+				}
 		}
 	  else{
-			
-	  		return [ playerInstanceList: Player.list(params), playerInstanceTotal: Player.count(), winnersTotals: gameTotals ]
-	  }
+			title = "Games Played"
+			players.each { player->
+				if(player.gamesPlayed>0){
+					totals[player.name] = player.gamesPlayed	
+				}
+			}
+	 }
+		return [ playerInstanceList: players, playerInstanceTotal: Player.count(), totals: totals, title: title  ]
 	}
 
 	
